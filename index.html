@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--utils/websockify/run --web=./ --target-config vnc_tokens 6080-->
+    <!--
+    
+    noVNC example: simple example using default UI
+    Copyright (C) 2012 Joel Martin
+    Copyright (C) 2013 Samuel Mannehed for Cendio AB
+    noVNC is licensed under the MPL 2.0 (see LICENSE.txt)
+    This file is licensed under the 2-Clause BSD license (see LICENSE.txt).
+
+    Connect parameters are provided in query string:
+        http://example.com/?host=HOST&port=PORT&encrypt=1&true_color=1
+    or the fragment:
+        http://example.com/#host=HOST&port=PORT&encrypt=1&true_color=1
+    -->
+    <title>noVNC</title>
+
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+                Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Apple iOS Safari settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Home Screen Icons (favourites and bookmarks use the normal icons) -->
+    <link rel="stylesheet" type="" href="bootstrap.min.css">
+</head>
+
+<body style="margin: 0px;">
+
+    <!--<div id="noVNC_container">
+        <div id="noVNC_status_bar" class="noVNC_status_bar" style="margin-top: 0px;">
+            <table border=0 width="100%">
+                <tr>
+                    <td>
+                        <div id="noVNC_status" style="position: relative; height: auto;">
+                            Loading
+                        </div>
+                    </td>
+                    <td width="1%">
+                        <div id="noVNC_buttons">
+                            <input type=button value="Send CtrlAltDel" id="sendCtrlAltDelButton">
+                            <span id="noVNC_xvp_buttons">
+                        <input type=button value="Shutdown"
+                            id="xvpShutdownButton">
+                        <input type=button value="Reboot"
+                            id="xvpRebootButton">
+                        <input type=button value="Reset"
+                            id="xvpResetButton">
+                        </span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>-->
+    <!--<div id='container'>
+                <div id='row1'>
+                    <div id='canvas1'></div>
+                    <div></div>
+                </div>
+                <div id='row2'>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>-->
+    <!--<div class="panel panel-default" style="width:48%;float:left;margin-left:1%">
+        <div class="panel-heading">Panel heading without title</div>
+        <div class="panel-body" style="width: 100%;height: 400px;padding: 0 " id='canvas2'>
+            <canvas id="noVNC_canvas2">
+                Canvas not supported.
+                 </canvas>
+        </div>
+    </div>
+    <div class="panel panel-default" style="width:48%;float:left;margin-left:1%">
+        <div class="panel-heading">Panel heading without title</div>
+        <div class="panel-body" id='canvas3 ' style=" width:100%;height: 400px;padding: 0 ">
+            <canvas id="noVNC_canvas3">
+                Canvas not supported.
+                 </canvas>
+        </div>
+    </div>-->
+    <button id='vmView' type="button" class="btn btn-default">虚拟机视图</button>
+    <!--<div id='noVnc-container'>
+
+    </div>
+ <div id='pageCtnr' style="clear:both;text-align: center"></div>-->
+    <div id='replace'></div>
+
+    <!--<div style="float: left;width: 1000px;height: 500px" id='canvas'>
+        <canvas id="noVNC_canvas" width="640px" height="20px">
+                Canvas not supported.
+                 </canvas>
+    </div>-->
+
+    <!--<div style="float: left; width: 1000px;height: 500px" id='canvas2'>
+            <canvas id="noVNC_canvas2">
+                Canvas not supported.
+                 </canvas>
+        </div>-->
+
+    <!--<div style='clear:both'></div>
+        <div id='canvas3' style="float: left; width: 800px;height: 800px">
+            <canvas id="noVNC_canvas3" width="640px" height="500px" style="width:800px; height: 500px">
+                Canvas not supported.
+                 </canvas>
+        </div>-->
+    <!--</div>-->
+
+    <!--<div>
+        <div id="noVncModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" data-backdrop="static">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div id='zoomCanvasCtnr' class="modal-body" style="padding: 0 ">
+                        <canvas id='zoomCanvas'></canvas>
+                    </div>
+                    <div class="modal-footer" style='margin-top:0'>
+                        <button id="zoomClose" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="global.js"></script>
+</body>
+
+</html>
